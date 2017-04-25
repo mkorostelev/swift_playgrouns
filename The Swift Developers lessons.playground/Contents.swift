@@ -76,29 +76,51 @@ import UIKit
 
 // closures
 
-let names = ["Joe", "john", "Adam", "jack", "Jeremy"]
+//let names = ["Joe", "john", "Adam", "jack", "Jeremy"]
+//
+//names.sorted()
+//
+//names
+//
+//"Java".lowercased()
+//
+//let a = names.sorted{$0.lowercased()<$1.lowercased()}
+//
+//a
+//
+//names
+//
+//// захват значений
+//
+//func makeHello(helloString: String) -> (String) -> (String) {
+//    return { (name: String)-> String in return "\(helloString) \(name) " }
+//}
+//
+//var helloMethod = makeHello(helloString: "Hello, dear")
+//
+//helloMethod("Mikki")
 
-names.sorted()
-
-names
-
-"Java".lowercased()
-
-let a = names.sorted{$0.lowercased()<$1.lowercased()}
-
-a
-
-names
-
-// захват значений
-
-func makeHello(helloString: String) -> (String) -> (String) {
-    return { (name: String)-> String in return "\(helloString) \(name) " }
+enum Operation{
+    case double(Double)
+    case string(String)
+    case integet(Int)
 }
 
-var helloMethod = makeHello(helloString: "Hello, dear")
+var dictionary: Dictionary<String, Operation> = [
+    "double": Operation.double(22.4),
+    "string": .string("Hi")
+]
 
-helloMethod("Mikki")
+dictionary.count
+
+dictionary["double"]
+
+
+
+
+
+
+
 
 
 
