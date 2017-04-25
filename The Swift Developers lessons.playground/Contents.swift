@@ -1,8 +1,6 @@
 //: Playground - noun: a place where people can play
 
 import UIKit
-// test 111
-
 //
 //var str = "Hello, playground"
 //
