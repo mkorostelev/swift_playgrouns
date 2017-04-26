@@ -15,6 +15,14 @@ class QuadrEq {
     
     var calculated = false
     
+    init(a: Double, b: Double, c: Double) {
+        self.a = a
+        
+        self.b = b
+        
+        self.c = c
+    }
+    
     func calculate() -> (Double?, Double?){
         let d = b * b - 4 * a * c
         
@@ -40,10 +48,7 @@ class QuadrEq {
     }
 }
 
-let quadrEq1 = QuadrEq()
-quadrEq1.a = 1
-quadrEq1.b = 2
-quadrEq1.c = 3
+let quadrEq1 = QuadrEq(a: 1, b: 2, c: 3)
 
 quadrEq1.calculated
 
@@ -51,12 +56,11 @@ quadrEq1.printQuadrEqResult()
 
 quadrEq1.calculated
 
-let quadrEq2 = QuadrEq()
-quadrEq2.a = 1
-quadrEq2.b = 3
-quadrEq2.c = -4
+let quadrEq2 = QuadrEq(a: 1, b: 3, c: -4)
 
 quadrEq2.calculated
+
+quadrEq2.calculate()
 
 quadrEq2.printQuadrEqResult()
 
