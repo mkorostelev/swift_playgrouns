@@ -205,20 +205,80 @@ import UIKit
 //
 //}
 
-enum Device {
-    case iPhone
-    case iPad
-    var year: Int {
-        switch self {
-        case .iPhone: return 2007
-        case .iPad: return 2010
-        }
-    }
+//enum Device {
+//    case iPhone
+//    case iPad
+//    var year: Int {
+//        switch self {
+//        case .iPhone: return 2007
+//        case .iPad: return 2010
+//        }
+//    }
+//    
+//    static func getCoolDevise() -> Device{
+//        return self.iPad
+//    }
+//}
+//
+//var myValue1 = Device.iPad
+//
+//myValue1.year
+//
+//Device.getCoolDevise()
+//var a:String
+//a = "1"
+//var i = Int(a)
+//i
+//if let a = Int("1") {
+//    a
+//}
+
+func mid<T: Comparable>(array: [T]) -> T? {
+    guard !array.isEmpty else { return nil }
+    return array.sorted()[(array.count - 1) / 2]
 }
 
-var myValue1 = Device.iPad
+mid(array: [3, 5, 1, 2, 4])
 
-myValue1.year
+
+
+func swapTwoValues<T>(_ a: inout T, _ b: inout T) {
+    let temporaryA = a
+    a = b
+    b = temporaryA
+}
+
+var someInt = 3
+var anotherInt = 107
+swapTwoValues(&someInt, &anotherInt)
+
+someInt
+
+anotherInt
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
