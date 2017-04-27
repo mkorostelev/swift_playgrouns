@@ -1,6 +1,14 @@
-//: Playground - noun: a place where people can play
+//
+//  main.swift
+//  l_27_04_2017_lesson3
+//
+//  Created by Maksym Korostelov on 4/27/17.
+//  Copyright © 2017 Maksym Korostelov. All rights reserved.
+//
 
-import UIKit
+import Foundation
+
+//: Playground - noun: a place where people can play
 
 //Classes     vs      Structs
 //Ref                 Value
@@ -87,14 +95,14 @@ class LinkedList<T>{
             return
         }
         
-        // if index >= count - append
-        if index >= (self.count - 1) {
+        // if index >= count - do append
+        if index >= self.count {
             self.append(value: value)
             
             return
         }
         
-//        let localIndex = index > self.count ? self.count : index
+        //        let localIndex = index > self.count ? self.count : index
         
         if let currIndexNode = self.getNodeByIndex(index) {
             let newNode = LinkedListNode(value: value)
@@ -133,6 +141,8 @@ class LinkedList<T>{
             } else if let nextNode = indexNode.next {
                 // it is first item
                 self.first = nextNode
+                
+                nextNode.prev = nil
             } else{
                 // it was last item
                 self.first = nil
@@ -163,93 +173,101 @@ class LinkedList<T>{
 }
 
 
-var list1 = LinkedList<Int>()
+//var list1 = LinkedList<Int>()
+//
+//
+//
+//list1.append(value: 5)
+//
+//list1.append(value: 7)
+//
+//list1.append(value: 6)
+//
+//list1.insertByIndex(2, value: 9)
+//
+//print(list1.getItems())
+//
+////1
+//print(list1.deleteByIndex(1) ?? "Error")
+//
+////2
+//
+//print(list1.deleteByIndex(1) ?? "Error")
+//
+////3
+//print(list1.deleteByIndex(0) ?? "Error")
+//
+//print(list1.getItems())
 
-list1.count
+class Queue<T>{
+    var list: LinkedList<T>?
+    
+    func addItem(_ value: T){
+        self.list?.append(value: value)
+    }
+    
+    func getItem()->T?{
+        return self.list?.deleteByIndex(0)
+    }
+    init() {
+        self.list = LinkedList()
+    }
+}
 
-list1.append(value: 5)
+let myQueue = Queue<Int>()
 
-list1.first?.value
+myQueue.addItem(1)
 
-list1.append(value: 7)
+myQueue.addItem(2)
 
-list1.first?.value
+myQueue.addItem(3)
 
-list1.last?.value
+print("Queue")
 
-list1.append(value: 6)
+print(myQueue.list?.getItems() ?? "Error")
 
-list1.insertByIndex(3, value: 9)
+print(myQueue.getItem() ?? "Error")
 
-list1.count
+print(myQueue.getItem() ?? "Error")
 
-list1.first?.value
+//print(myQueue.getItem() ?? "Error")
 
-list1.getByIndex(0)
+print(myQueue.list?.getItems() ?? "Error")
 
-list1.getByIndex(1)
+class Stack<T>{
+    var list: LinkedList<T>?
+    
+    func addItem(_ value: T){
+        self.list?.append(value: value)
+    }
+    
+    func getItem()->T?{
+        return self.list?.deleteByIndex((self.list?.count)! - 1)
+    }
+    init() {
+        self.list = LinkedList()
+    }
+}
 
-list1.getByIndex(2)
+let myStack = Stack<Int>()
 
-list1.getItems()
+myStack.addItem(1)
 
+myStack.addItem(2)
 
-//1
-list1.deleteByIndex(1)
+myStack.addItem(3)
 
-list1.getByIndex(0)
+print("Stack")
 
-list1.getByIndex(1)
+print(myStack.list?.getItems() ?? "Error")
 
-list1.getByIndex(2)
+print(myStack.getItem() ?? "Error")
 
+print(myStack.getItem() ?? "Error")
 
-list1.getItems()
+//print(myStack() ?? "Error")
 
-//2
-
-list1.deleteByIndex(1)
-
-list1.getByIndex(0)
-
-list1.getByIndex(1)
-
-list1.getByIndex(2)
-
-list1.getItems()
-
-list1.count
-
-//3
-list1.deleteByIndex(0)
-
-list1.first?.value
-
-list1.getByIndex(0)
-
-list1.getByIndex(1)
-
-list1.getByIndex(2)
-
-list1.getItems()
-
-
-//class Queue{
-//    var list: LinkedList
-//}
-
-
-
-
-
-
-
-
-
-
-
-
-
+print(myStack.list?.getItems() ?? "Error")
 
 
 
