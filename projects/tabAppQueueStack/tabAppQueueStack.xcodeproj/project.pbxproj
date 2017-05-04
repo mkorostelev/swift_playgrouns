@@ -13,11 +13,23 @@
 		84E7B7051EBB3AEF00A307B4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84E7B7031EBB3AEF00A307B4 /* Main.storyboard */; };
 		84E7B7071EBB3AEF00A307B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84E7B7061EBB3AEF00A307B4 /* Assets.xcassets */; };
 		84E7B70A1EBB3AEF00A307B4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84E7B7081EBB3AEF00A307B4 /* LaunchScreen.storyboard */; };
-		84E7B7131EBB3C5600A307B4 /* LinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E7B7121EBB3C5600A307B4 /* LinkedList.swift */; };
-		84E7B7181EBB3E6900A307B4 /* LinkedListNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E7B7171EBB3E6900A307B4 /* LinkedListNode.swift */; };
-		84E7B71A1EBB3F7B00A307B4 /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E7B7191EBB3F7B00A307B4 /* Queue.swift */; };
-		84E7B71C1EBB3FAD00A307B4 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E7B71B1EBB3FAD00A307B4 /* Stack.swift */; };
+		A0E4940C1EBB956C0006ED19 /* ListQueueStack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0E4940A1EBB95390006ED19 /* ListQueueStack.framework */; };
+		A0E4940D1EBB956C0006ED19 /* ListQueueStack.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A0E4940A1EBB95390006ED19 /* ListQueueStack.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A0E4940E1EBB956C0006ED19 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A0E4940D1EBB956C0006ED19 /* ListQueueStack.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		84E7B6FA1EBB3AEF00A307B4 /* tabAppQueueStack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tabAppQueueStack.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -28,10 +40,7 @@
 		84E7B7061EBB3AEF00A307B4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84E7B7091EBB3AEF00A307B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		84E7B70B1EBB3AEF00A307B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		84E7B7121EBB3C5600A307B4 /* LinkedList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinkedList.swift; sourceTree = "<group>"; };
-		84E7B7171EBB3E6900A307B4 /* LinkedListNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinkedListNode.swift; sourceTree = "<group>"; };
-		84E7B7191EBB3F7B00A307B4 /* Queue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
-		84E7B71B1EBB3FAD00A307B4 /* Stack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
+		A0E4940A1EBB95390006ED19 /* ListQueueStack.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ListQueueStack.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0E4940C1EBB956C0006ED19 /* ListQueueStack.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -48,6 +58,7 @@
 		84E7B6F11EBB3AEF00A307B4 = {
 			isa = PBXGroup;
 			children = (
+				A0E4940A1EBB95390006ED19 /* ListQueueStack.framework */,
 				84E7B6FC1EBB3AEF00A307B4 /* tabAppQueueStack */,
 				84E7B6FB1EBB3AEF00A307B4 /* Products */,
 			);
@@ -68,10 +79,6 @@
 				84E7B6FF1EBB3AEF00A307B4 /* FirstViewController.swift */,
 				84E7B7011EBB3AEF00A307B4 /* SecondViewController.swift */,
 				84E7B7031EBB3AEF00A307B4 /* Main.storyboard */,
-				84E7B7121EBB3C5600A307B4 /* LinkedList.swift */,
-				84E7B7171EBB3E6900A307B4 /* LinkedListNode.swift */,
-				84E7B7191EBB3F7B00A307B4 /* Queue.swift */,
-				84E7B71B1EBB3FAD00A307B4 /* Stack.swift */,
 			);
 			path = tabAppQueueStack;
 			sourceTree = "<group>";
@@ -97,6 +104,7 @@
 				84E7B6F61EBB3AEF00A307B4 /* Sources */,
 				84E7B6F71EBB3AEF00A307B4 /* Frameworks */,
 				84E7B6F81EBB3AEF00A307B4 /* Resources */,
+				A0E4940E1EBB956C0006ED19 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -161,12 +169,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				84E7B7021EBB3AEF00A307B4 /* SecondViewController.swift in Sources */,
-				84E7B71A1EBB3F7B00A307B4 /* Queue.swift in Sources */,
-				84E7B71C1EBB3FAD00A307B4 /* Stack.swift in Sources */,
 				84E7B6FE1EBB3AEF00A307B4 /* AppDelegate.swift in Sources */,
-				84E7B7131EBB3C5600A307B4 /* LinkedList.swift in Sources */,
 				84E7B7001EBB3AEF00A307B4 /* FirstViewController.swift in Sources */,
-				84E7B7181EBB3E6900A307B4 /* LinkedListNode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,7 +294,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 25KV7PP28G;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = tabAppQueueStack/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = home.tabAppQueueStack;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -303,7 +312,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 25KV7PP28G;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = tabAppQueueStack/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = home.tabAppQueueStack;
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -8,6 +8,8 @@
 
 import UIKit
 
+import ListQueueStack
+
 class SecondViewController: UIViewController {
 
     override func viewDidLoad() {
@@ -45,7 +47,7 @@ class SecondViewController: UIViewController {
     }
     
     func updateLabelsText(currentOperationDescription: String){
-        let text = myStack.list?.descriptionString
+        let text = myStack.descriptionString()
         
         labelStack.text = text == "" ? "Stack is empty" : text
         

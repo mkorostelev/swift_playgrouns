@@ -8,17 +8,21 @@
 
 import Foundation
 
-class Queue<T>{
+public class Queue<T>{
     var list: LinkedList<T>?
     
-    func addItem(_ value: T){
+    public func addItem(_ value: T){
         self.list?.append(value: value)
     }
     
-    func getItem()->T?{
+    public func getItem()->T?{
         return self.list?.deleteByIndex(0)
     }
-    init() {
+    public init() {
         self.list = LinkedList()
+    }
+    
+    public func descriptionString()-> String?{
+        return self.list?.descriptionString
     }
 }

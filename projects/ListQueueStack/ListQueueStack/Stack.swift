@@ -8,17 +8,21 @@
 
 import Foundation
 
-class Stack<T>{
-    var list: LinkedList<T>?
+public class Stack<T>{
+    public var list: LinkedList<T>?
     
-    func addItem(_ value: T){
+    public func addItem(_ value: T){
         self.list?.append(value: value)
     }
     
-    func getItem()->T?{
+    public func getItem()->T?{
         return self.list?.deleteByIndex((self.list?.count)! - 1)
     }
-    init() {
+    public init() {
         self.list = LinkedList()
+    }
+    
+    public func descriptionString()-> String?{
+        return self.list?.descriptionString
     }
 }
